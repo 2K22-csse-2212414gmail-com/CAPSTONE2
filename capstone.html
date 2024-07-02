@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agreement solution using HyperLedger Fabrics</title>
+</head>
+     <link rel="stylesheet" href="capstone.css">
+<body>
+    <h1>Admin Login</h1>
+    <div class="container"><form action="capstone2.html"id="invalid">
+        <input placeholder="E-mail" required/>
+        <input placeholder="password" required/>
+        <label><input type="checkbox"/>Remember me</label>
+        <button>Sign in</button>
+     </form>
+     <div><form action="capstone3.html">
+        <button>sign up</button>
+     </form></div>
+</body>
+<script>
+   const cred = new PasswordCredential({
+  id: '<site user>', // ex: myLoginUser@mail.com
+  password: '<site password>',
+  name: '<name>',  // how it appears in password manager
+});
+
+navigator.credentials.store(cred) // Will prompt you to save the password
+ .then(()  => {
+   // Do something or not
+ });
+</script>
+</html>
